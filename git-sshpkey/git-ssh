@@ -1,0 +1,27 @@
+Generate key
+
+ssh-keygen -t rsa -b 4096 -C "naga.rendla@gmail.com"
+
+copy content id_rsa.pub file in github
+
+root@srevm3:~/git# git clone git@github.com:gopal0305/devops.git
+Cloning into 'devops'...
+The authenticity of host 'github.com (140.82.121.4)' can't be established.
+ECDSA key fingerprint is SHA256:p2QAMXNIC1TJYWeIOttrVc98/R1BUFWu3/LiyKgUfQM.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added 'github.com,140.82.121.4' (ECDSA) to the list of known hosts.
+remote: Enumerating objects: 27, done.
+remote: Counting objects: 100% (27/27), done.
+remote: Compressing objects: 100% (13/13), done.
+remote: Total 27 (delta 5), reused 16 (delta 3), pack-reused 0
+Receiving objects: 100% (27/27), 5.79 KiB | 5.79 MiB/s, done.
+Resolving deltas: 100% (5/5), done.
+root@srevm3:~/git# ls -rlt
+
+git add krishna.txt
+git commit -m "first linux commit"
+
+git remote add origin git@github.com:gopal0305/devops.git
+
+git push -u origin master
+
